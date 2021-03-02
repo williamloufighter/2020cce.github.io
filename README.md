@@ -1,6 +1,6 @@
 # 2020cce.github.io
 code
-
+1.找零錢
 ```c
 #include <stdio.h>
 int main()
@@ -10,7 +10,7 @@ int main()
 	printf("%d=50*%d+5*%d+1*%d\n",n,n/50,(n%50)/5,(n%5)/1);
 }
 ```
-
+2.因數個數
 ```c
 #include <stdio.h>
 int main()
@@ -24,7 +24,7 @@ int main()
 	printf("%d\n",ans);
 }
 ```
-
+3.找倍數
 ```c
 #include <stdio.h>
 int main()
@@ -39,7 +39,7 @@ int main()
 	printf("%d\n",ans);
 }
 ```
-
+4.整數轉換為等級
 ```c
 #include <stdio.h>
 int main()
@@ -52,7 +52,7 @@ int main()
 	else printf("F\n");
 }
 ```
-
+5.分式化簡
 ```c
 #include <stdio.h>
 int main()
