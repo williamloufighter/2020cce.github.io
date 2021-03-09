@@ -130,7 +130,7 @@ int main()
 	else printf("  It is not a square ");
 }
 ```
-5.2進位轉10進位
+5.進位轉10進位
 ```c
 #include <stdio.h>
 int main()
