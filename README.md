@@ -167,3 +167,87 @@ int main()
 	printf("前標:%.1f\n",avgTop);
 }
 ```
+1.計算陣列的平方值
+```c
+#include <stdio.h>
+int main()
+{
+	int n,a[100];
+	scanf("%d",&n);
+	for(int i=0; i<n; i++){
+		scanf("%d",&a[i]);
+		printf("%d,",a[i]*a[i]);
+	}
+	printf("\n");
+}
+```
+2.大小寫轉換
+```c
+#include <stdio.h>
+int main()
+{
+	char c[10];
+	scanf("%s",&c);
+	int i=0;
+	while(c[i]!='\0'){
+		if('A'<=c[i]&&c[i]<='Z')
+			printf("%c",c[i]-'A'+'a');
+		else if('a'<=c[i]&&c[i]<='z')
+			printf("%c",c[i]-'a'+'A');
+		else printf("%c",c[i]);
+	i++;
+	}
+	printf("\n");
+}
+```
+3.計算幾週與幾天
+```c
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	printf("%d %d\n",n/7,n%7);
+}
+```
+4.計程車資計算
+```c
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	if(n<=2000) printf("100");
+	else printf("%d\n",100+(n-2000+499)/500*5);
+}
+```
+5.兩數間可被5整除的整數
+```c
+#include <stdio.h>
+int main()
+{
+	int n,m,max,min;
+	scanf("%d%d",&n,&m);
+	if(n>m) {max=n;min=m;}
+	else {max=m; min=n;}
+	for(int i=min; i<=max; i++){
+		if(i%5==0) printf("%d\n",i);
+	}
+}
+```
+6.整數間最大距離
+```c
+#include <stdio.h>
+int main()
+{
+	int a[10],max,min;
+	for(int i=0; i<3; i++)
+		scanf("%d",&a[i]);
+	min=a[0]; max=a[0];
+	for(int i=0; i<3; i++){
+		if(min>a[i]) min=a[i];
+		if(max<a[i]) max=a[i];
+	}
+		printf("%d\n",max-min);
+}
+```
