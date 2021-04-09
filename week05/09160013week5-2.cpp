@@ -10,5 +10,5 @@ int main()
     char line3[]="majority";
     printf("%s\n",line3);
     char line4[]={'m','a','j','o','r','i','t','y'};
-    printf("�A�ݬ�,�{�b�L�X��line4: ==%s==\n",line4);
+    printf("§A¬Ý¬Ý,²{¦b¦L¥Xªºline4: ==%s==\n",line4);
 }
