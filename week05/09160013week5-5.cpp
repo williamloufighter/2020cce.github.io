@@ -5,8 +5,8 @@ int main()
     char line[10]="majority";
     char line2[10]="ask";
     if(strcmp(line,line2)>0){
-        printf("����j\n");
+        printf("¥ªÃä¤j\n");
     }else{
-        printf("�k��j\n");
+        printf("¥kÃä¤j\n");
     }
 }
