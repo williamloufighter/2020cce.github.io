@@ -251,3 +251,181 @@ int main()
 		printf("%d\n",max-min);
 }
 ```
+1.除惡務盡 
+```c
+#include <stdio.h>
+int main()
+{
+	char a[100];
+	scanf("%s",&a);
+	int i=0;
+	while(a[i]!='\0'){
+		if(a[i]!='2') printf("%c",a[i]);
+		i++;
+	}
+	printf("\n");
+}
+```
+2.擲骰統計
+```c
+#include <stdio.h>
+int main()
+{
+	char a[100];
+	char count[7]={0};
+	scanf("%s",&a);
+	int i=0;
+	while(a[i]!='\0'){
+		count[a[i]-'0']++;
+		i++;
+	}
+	for(int i=1; i<=6; i++){
+		printf("%d:%d\n",i,count[i]);
+	}
+}
+```
+3.函數找整數的最大數字 
+```c
+#include<iostream>
+using namespace std;
+int max_digit(int n)
+{
+	int max;
+	max=n%10;
+	while(n>0){
+		if((n%10)>max) max=n%10;
+		n/=10;
+	}
+		return max;
+}
+int main(){
+  int n;cin>>n;
+  cout<<"["<<max_digit(n)<<"]";
+  return 0;
+}
+```
+4.星星等腰三角
+```c
+#include <stdio.h>
+int main()
+{
+	int n;
+	scanf("%d",&n);
+	for(int i=1; i<=n; i++){
+		for(int j=0; j<(n-i); j++)
+		printf(" ");
+		for(int j=0; j<(i*2-1); j++)
+		printf("*");
+	printf("\n");
+	}
+}
+```
+1.反序數字
+```c
+#include <stdio.h>
+int main()
+{
+	int a,b,c,d,e,f;
+	scanf("%d",&a);
+	if(a>=1000){
+	b=a%1000%100%10*1000;
+	c=a%1000%100/10*100;
+	d=a%1000/100*10;
+	e=a/1000;
+	f=b+c+e+d;
+	}
+	if(a<1000){
+	c=a%100%10*100;
+	d=a%100/10*10;
+	e=a/100;
+	f=c+e+d;
+	}
+	printf("%d+%d=%d\n",a,f,a+f);
+}
+```
+2.絕對值函數
+```c
+#include <stdio.h>
+int f(int n)
+{
+	if(n<0) n=-n;
+	return n;
+}
+int main(void)
+{
+	int n;
+	scanf("%d",&n);
+	printf("[%d]",f(n));
+	return 0;
+}
+```
+1.迴文判斷
+```c
+#include <stdio.h>
+#include <string.h>
+char a[10];
+int main()
+{
+	int len,i;
+	scanf("%s",&a);
+	len=strlen(a);
+	for(i=0; i<(len/2); i++){
+		if(a[i]!=a[len-1-i]) break;
+	}
+	if(i==(len/2)) printf("YES\n");
+	else printf("NO\n");
+}
+```
+2.函數反序排列數字
+```c
+#include <stdio.h>
+int main()
+{
+	int n,b=0,a;
+	scanf("%d",&n);
+	
+	a=n;
+	for(int i=1; i<=4; i++){
+		b=b*10+a%10;
+		a=a/10;
+		if(a==0) break;
+	}
+	printf("%d\n",b);
+}
+```
+3.陣列找出現次數
+```c
+#include <stdio.h>
+int main()
+{
+	int count=0,a[10],x,n,i;
+	for(int i=0; i<10; i++){
+		scanf("%d",&a[i]);
+		if(a[i]==0) break;
+		n=i;
+	}
+	scanf("%d",&x);
+	for(int i=0; i<n; i++){
+		if(a[i]==x) count++;
+	}
+	printf("%d\n",count);
+}
+```
+4.判斷大小
+```c
+#include <stdio.h>
+int f(int a,int b)
+{
+	int ans;
+	if(a>b) ans=1;
+	if(a==b) ans=0;
+	if(a<b) ans=-1;
+	return ans;
+}
+int main(){
+    int a, b;
+    scanf("%d %d", &a, &b);
+    printf("%d",f(a,b));
+    return 0;
+}
+```
