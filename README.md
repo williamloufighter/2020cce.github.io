@@ -429,3 +429,72 @@ int main(){
     return 0;
 }
 ```
+1.將一連串整數相乘
+```c
+#include <stdio.h>
+int main()
+{
+	int a,b,ans=1;
+	scanf("%d",&a);
+	printf("Enter the number of values to be processed:");
+	for(int i=0; i<a; i++){
+		printf(" Enter a value:");
+		scanf("%d",&b);
+		ans*=b;
+	}
+	printf(" Product of the %d values is %d",a,ans);
+}
+```
+2.最大公因數gcd 
+```c
+#include <stdio.h>
+int main()
+{
+	int a,b,max,min,ans=1;
+	scanf("%d%d",&a,&b);
+	printf("Enter two integers: \n");
+	if(a>b) min=b;
+	else min=a;
+	for(int i=1; i<=min; i++){
+		if(a%i==0&&b%i==0) ans=i;
+	}
+	printf("The greatest common divisor of %d and %d is %d\n",a,b,ans);
+}
+```
+3.字串長度
+```c
+#include <stdio.h>
+#include <string.h>
+char a[200];
+char b[200];
+int main()
+{
+	int lena,lenb;
+	scanf("%s",a);
+	scanf("%s",b);
+	lena=strlen(a);
+	lenb=strlen(b);
+	if(lena>lenb) printf("1");
+	if(lena==lenb) printf("0");
+	if(lena<lenb) printf("-1");
+}
+```
+4.函數判斷質數
+```c
+#include <iostream>
+using namespace std;
+int prime(int n)
+{
+	int i;
+	for(i=2; i<n; i++){
+		if(n%i==0) break;
+	}
+	if(i==n) return 1;
+	else return 0;
+}
+int main(){
+  int n;cin>>n;
+  cout<<"["<<prime(n)<<"]";
+  return 0;
+}
+```
