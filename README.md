@@ -498,3 +498,54 @@ int main(){
   return 0;
 }
 ```
+1.簡化版UVA10082告訴我頻率-不用排序
+```c
+#include <stdio.h>
+char line[2000];
+int ans[256];
+int main()
+{
+	for(int t=0; gets(line); t++){
+		for(int i=0; i<256; i++) ans[i]=0;
+		
+		for(int i=0; line[i]!=0; i++){
+			char c=line[i];
+			ans[c]++;
+		}
+		if(t>0) printf("\n");
+		for(int i=0; i<256; i++){
+			if(ans[i]>0) printf("%d %d\n",i,ans[i]);
+		}
+	}
+}
+```
+2.Train Swapping 
+```c
+#include <stdio.h>
+int a[100];
+int main()
+{
+	int T;
+	scanf("%d",&T);
+	for(int t=0; t<T; t++){
+		int N;
+		scanf("%d",&N);
+		for(int i=0; i<N; i++){
+			scanf("%d",&a[i]);
+		}
+		int ans=0;
+		for(int K=0; K<N-1; K++){
+			for(int i=0; i<N-1; i++){
+				if(a[i]>a[i+1]){
+					int temp=a[i];
+					a[i]=a[i+1];
+					a[i+1]=temp;
+					ans++;
+				}
+			}
+		}
+		
+		printf("Optimal train swapping takes %d swaps.\n",ans);
+	}
+}
+```
